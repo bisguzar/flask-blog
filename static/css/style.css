@@ -1,0 +1,18 @@
+body,html {
+  margin:0;
+  padding:0;
+}
+
+main{
+	width: 50%;
+	margin: 0 auto;
+}
+
+header{
+	background-color: orange;
+	font-size: 32px;
+}
+
+main div:not(:last-child){
+	border-bottom: 2px dotted black;
+}

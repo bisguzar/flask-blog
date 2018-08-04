@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Benim Blogum - {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<header>
+    <main>Benim Blogum</main>
+</header>
+<main>
+    <nav>
+        {% if 'username' in session %}
+            <a href="/cikis">çıkış yap</a>
+            <a href="/yaziekle">yazı ekle</a>
+        {% else %}
+            <a href="/girisyap">giriş yap</a>
+        {% endif %}
+    </nav>
+    <content>
+        {% block main %}{% endblock %}
+    </content>
+</main>
+</body>
+</html>

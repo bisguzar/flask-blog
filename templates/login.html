@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %} Giriş Yap {% endblock %}
+{% block main %}
+	<form method="POST" action="/girisyap">
+		
+		<table>
+			<tr>
+				<th><label for="username">Kullanıcı Adı:</label></th>
+				<th><input type="text" name="username" required></br></th>
+			</tr>
+			<tr>
+				<td><label for="password">Şifre:</label></td>
+				<td><input type="password" name="password" style="width: 30%;" required></td>
+			</tr>
+			<tr>
+				<td><button type="submit">Yayınla</button></td>
+			</tr>
+		</table>
+	</form>
+{% endblock %}

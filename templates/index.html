@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %} Ana Sayfa {% endblock %}
+
+{% block main %}
+
+    {% for post in posts %}
+        <div>
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.content|safe }}</p>
+        </div>
+    {% endfor %}
+
+{% endblock %}
